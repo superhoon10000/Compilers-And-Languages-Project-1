@@ -6,25 +6,13 @@ Value: ,, Type of token: Separator
 Value: b, Type of token: Identifier
 Value: ), Type of token: Separator
 Value: :, Type of token: Separator
-
-
-There are a total of: 8 Tokens.
-
 Value: result, Type of token: Identifier
 Value: =, Type of token: Operator
 Value: a, Type of token: Identifier
 Value: +, Type of token: Operator
 Value: b, Type of token: Identifier
-
-
-There are a total of: 5 Tokens.
-
 Value: return, Type of token: Keyword
 Value: result, Type of token: Identifier
-
-
-There are a total of: 2 Tokens.
-
 Value: print, Type of token: Keyword
 Value: (, Type of token: Separator
 Value: add, Type of token: Identifier
@@ -36,5 +24,4 @@ Value: ), Type of token: Separator
 Value: ), Type of token: Separator
 
 
-There are a total of: 9 Tokens.
-
+There are a total of: 24 Tokens.

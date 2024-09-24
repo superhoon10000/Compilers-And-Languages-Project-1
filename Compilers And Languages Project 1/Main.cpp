@@ -7,6 +7,7 @@ int main()
 	string oFileName;
 	string line;
 	string tokenizedOFileName;
+	int tokenCount = 0;
 
 	//asks for the file to input the code from
 	cout << "Enter Code Set file name\n";
@@ -48,10 +49,15 @@ int main()
 	{
 		lexicalAnalyzer tokenizer(line);
 		vector<token> tokens = tokenizer.tokenize();
-		outputTokens(tokens,tokenizedOFileName);
+		outputTokens(tokens,tokenizedOFileName,tokenCount);
 	}
 
+	ofstream tokenizedFile(tokenizedOFileName, ios::app);
+
+	tokenizedFile << "\n\nThere are a total of: " << tokenCount << " Tokens.";
+
 	codeOutput.close();
+	tokenizedFile.close();
 
 	return 0;
 }

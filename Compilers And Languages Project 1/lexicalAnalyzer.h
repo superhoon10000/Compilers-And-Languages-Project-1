@@ -49,7 +49,7 @@ public:
 };
 
 string getTokenName(tokenType type);
-void outputTokens(const vector<token>& tokens, const string& fileName);
+void outputTokens(const vector<token>& tokens, const string& fileName, int& count);
 
 
 /*Uses inspiration from the lexical Analysis created by Geeksforgeeks
