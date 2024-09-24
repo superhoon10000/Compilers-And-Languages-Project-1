@@ -7,7 +7,8 @@ enum class tokenType
 	IDENTIFIER,
 	LITERAL,
 	OPERATOR,
-	SEPARATOR
+	SEPARATOR,
+	UNKNOWN
 };
 
 struct token
@@ -28,10 +29,13 @@ private:
 	void initKeywords();
 	bool isWhitespace(char c);
 	bool isAlphabet(char c);
-	bool isDigit(char c);
+	bool isNum(char c);
 	bool isAlphaNumeric(char c);
-	string getNextWord();
-	string getNextNumber();
+	bool isSeparator(char c);
+	bool isOperator(char c);
+	bool isStringLiteral(char c);
+	string nextWord();
+	string nextNumber();
 
 public:
 	lexicalAnalyzer(const string& source):input(source),location(0)
