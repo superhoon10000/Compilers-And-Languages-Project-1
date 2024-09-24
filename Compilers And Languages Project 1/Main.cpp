@@ -19,7 +19,10 @@ int main()
 
 		line = deleteComment(line);
 
-		codeOutput << line << endl;
+		if (!line.empty())
+		{
+			codeOutput << line << endl;
+		}
 	}
 
 	codeSet.close();

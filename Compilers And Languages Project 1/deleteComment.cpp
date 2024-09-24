@@ -17,5 +17,5 @@ string deleteComment (const string& line)
 		cleaned = cleaned.substr(0, pythonComment);
 	}
 
-	return cleaned;
+	return deleteWhitespace(cleaned);
 }
