@@ -142,6 +142,7 @@
   <ItemGroup>
     <Text Include="Code set 1.txt" />
     <Text Include="Set 1 Output.txt" />
+    <Text Include="token Set 1.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

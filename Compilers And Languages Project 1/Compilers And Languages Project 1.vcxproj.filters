@@ -52,5 +52,8 @@
     <Text Include="Set 1 Output.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="token Set 1.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

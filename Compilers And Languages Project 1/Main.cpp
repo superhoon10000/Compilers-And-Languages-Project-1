@@ -1,4 +1,4 @@
-#include "Header.h"
+#include "lexicalAnalyzer.h"
 
 int main()
 {
@@ -6,6 +6,7 @@ int main()
 	string iFileName;
 	string oFileName;
 	string line;
+	string tokenizedOFileName;
 
 	//asks for the file to input the code from
 	cout << "Enter Code Set file name\n";
@@ -18,7 +19,7 @@ int main()
 
 	//initialized to the files asked for by the user
 	ifstream codeSet(iFileName);
-	ofstream codeOutput(oFileName);
+	fstream codeOutput(oFileName);
 
 	//While loop that reads through the file line by line
 	while (getline(codeSet, line)) {
@@ -32,9 +33,25 @@ int main()
 			codeOutput << line << endl;
 		}
 	}
-
 	codeSet.close();
+	codeOutput.close();
 
+	codeOutput.open(oFileName);
+	codeOutput.seekg(0);
+
+	cout << "Enter Name of File to Output the final tokenized code to\n";
+	getline(cin, tokenizedOFileName);
+
+
+
+	while (getline(codeOutput, line))
+	{
+		lexicalAnalyzer tokenizer(line);
+		vector<token> tokens = tokenizer.tokenize();
+		outputTokens(tokens,tokenizedOFileName);
+	}
+
+	codeOutput.close();
 
 	return 0;
 }
