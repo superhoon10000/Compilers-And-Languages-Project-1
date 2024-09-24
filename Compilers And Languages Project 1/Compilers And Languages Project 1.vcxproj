@@ -129,8 +129,10 @@
   <ItemGroup>
     <ClCompile Include="deleteComment.cpp" />
     <ClCompile Include="deleteWhitespace.cpp" />
+    <ClCompile Include="getTokenName.cpp" />
     <ClCompile Include="lexicalAnalyzer.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="outputTokens.cpp" />
     <ClCompile Include="removeExtraSpaces.cpp" />
   </ItemGroup>
   <ItemGroup>

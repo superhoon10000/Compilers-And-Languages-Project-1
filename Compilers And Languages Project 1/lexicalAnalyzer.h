@@ -48,6 +48,12 @@ public:
 
 };
 
+string getTokenName(tokenType type);
+
+
+
+void outputTokens(const vector<token>& tokens, ofstream& output);
+
 
 /*Uses inspiration from the lexical Analysis created by Geeksforgeeks
 https://www.geeksforgeeks.org/lexical-analyzer-in-cpp/
