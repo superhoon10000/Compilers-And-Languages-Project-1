@@ -21,5 +21,5 @@ string deleteComment (const string& line)
 	}
 
 	//returns line with the comments removed
-	return deleteWhitespace(cleaned);
+	return removeExtraSpaces(cleaned);
 }

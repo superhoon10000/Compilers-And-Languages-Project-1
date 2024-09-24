@@ -23,10 +23,7 @@ int main()
 	//While loop that reads through the file line by line
 	while (getline(codeSet, line)) {
 
-		//removes all extra spaces from the current line
-		line = removeExtraSpaces(line);
-
-		//deletes all comments and whitespaces from the function
+		//deletes all comments and extra spaces from the function
 		line = deleteComment(line);
 
 		//if the line is not empty adds it to the final output file, removing all empty new lines between the code
