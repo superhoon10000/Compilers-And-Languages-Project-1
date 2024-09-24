@@ -1,5 +1,5 @@
 #include "Header.h"
-using namespace std;
+
 int main()
 {
 	string iFileName;
@@ -16,6 +16,9 @@ int main()
 	ofstream codeOutput(oFileName);
 
 	while (getline(codeSet, line)) {
+
+		line = deleteComment(line);
+
 		codeOutput << line << endl;
 	}
 
