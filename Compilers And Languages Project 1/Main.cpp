@@ -17,6 +17,8 @@ int main()
 
 	while (getline(codeSet, line)) {
 
+		line = removeExtraSpaces(line);
+
 		line = deleteComment(line);
 
 		if (!line.empty())
