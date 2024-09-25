@@ -141,6 +141,12 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Code set 1.txt" />
+    <Text Include="CPP code.txt" />
+    <Text Include="CPP Output.txt" />
+    <Text Include="CPP tokenized.txt" />
+    <Text Include="Python code.txt" />
+    <Text Include="Python Output.txt" />
+    <Text Include="Python tokenized.txt" />
     <Text Include="Set 1 Output.txt" />
     <Text Include="token Set 1.txt" />
   </ItemGroup>

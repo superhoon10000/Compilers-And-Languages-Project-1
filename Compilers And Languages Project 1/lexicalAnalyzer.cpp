@@ -39,13 +39,14 @@ bool lexicalAnalyzer::isSeparator(char c)
 
 bool lexicalAnalyzer::isOperator(char c)
 {
-	return c == '=' || c == '+' || c == '=';
+	return c == '=' || c == '+' || c == '<';
 }
 
 bool lexicalAnalyzer::isStringLiteral(char c)
 {
 	return c == '"';
 }
+
 
 string lexicalAnalyzer::nextWord()
 {
@@ -116,8 +117,17 @@ vector<token> lexicalAnalyzer::tokenize()
 		}
 		else if(isOperator(current))
 		{
-			tokens.emplace_back(tokenType::OPERATOR, string(1, current));
-			location++;
+			char nextChar = input[location + 1];
+			if((current == '=' && nextChar == '=') || (current == '<' && nextChar == '<'))
+			{
+				tokens.emplace_back(tokenType::OPERATOR, string(1, current) + string(1, nextChar));
+				location+= 2;
+			}
+			else
+			{
+				tokens.emplace_back(tokenType::OPERATOR, string(1, current));
+				location++;
+			}
 		}
 		else if(isSeparator(current))
 		{

@@ -1,0 +1,40 @@
+Value: def, Type of token: Keyword
+Value: calculate_sum, Type of token: Keyword
+Value: (, Type of token: Separator
+Value: a, Type of token: Identifier
+Value: ,, Type of token: Separator
+Value: b, Type of token: Identifier
+Value: ), Type of token: Separator
+Value: :, Type of token: Separator
+Value: return, Type of token: Keyword
+Value: a, Type of token: Identifier
+Value: +, Type of token: Operator
+Value: b, Type of token: Identifier
+Value: if, Type of token: Keyword
+Value: __name__, Type of token: Identifier
+Value: ==, Type of token: Operator
+Value: "__main__", Type of token: Literal
+Value: :, Type of token: Separator
+Value: num1, Type of token: Identifier
+Value: =, Type of token: Operator
+Value: 10, Type of token: Literal
+Value: num2, Type of token: Identifier
+Value: =, Type of token: Operator
+Value: 20, Type of token: Literal
+Value: result, Type of token: Identifier
+Value: =, Type of token: Operator
+Value: calculate_sum, Type of token: Keyword
+Value: (, Type of token: Separator
+Value: num1, Type of token: Identifier
+Value: ,, Type of token: Separator
+Value: num2, Type of token: Identifier
+Value: ), Type of token: Separator
+Value: print, Type of token: Keyword
+Value: (, Type of token: Separator
+Value: "Sum:", Type of token: Literal
+Value: ,, Type of token: Separator
+Value: result, Type of token: Identifier
+Value: ), Type of token: Separator
+
+
+There are a total of: 37 Tokens.
