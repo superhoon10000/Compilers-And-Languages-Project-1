@@ -50,7 +50,7 @@ bool lexicalAnalyzer::isStringLiteral(char c)
 string lexicalAnalyzer::nextWord()
 {
 	size_t begin = location;
-	while(location < input.length() && isAlphaNumeric(input[location]))
+	while(location < input.length() && (isAlphaNumeric(input[location]) || input[location] == '_'))
 	{
 		location++;
 	}
@@ -97,7 +97,7 @@ vector<token> lexicalAnalyzer::tokenize()
 			string word = nextString();
 			tokens.emplace_back(tokenType::LITERAL, word);
 		}
-		else if (isAlphabet(current))
+		else if (isAlphabet(current) || current == '_')
 		{
 			string word = nextWord();
 			if (keywords.find(word) != keywords.end())
