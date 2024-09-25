@@ -57,10 +57,26 @@ string lexicalAnalyzer::nextWord()
 	return input.substr(begin, location - begin);
 }
 
-string lexicalAnalyzer::nextNumber()
+string lexicalAnalyzer::nextString()
 {
-	return string();
+	size_t begin = location;
+ 	if (location < input.length() && isStringLiteral(input[location]))
+	{
+		location++;
+		while (location < input.length() && !isStringLiteral(input[location]))
+		{
+			location++;
+		}
+
+		if (location < input.length() && isStringLiteral(input[location]))
+		{
+			location++;
+		}
+
+		return input.substr(begin, location - begin);
+	}
 }
+
 
 vector<token> lexicalAnalyzer::tokenize()
 {
@@ -78,7 +94,7 @@ vector<token> lexicalAnalyzer::tokenize()
 
 		if (isStringLiteral(current))
 		{
-			string word = nextWord();
+			string word = nextString();
 			tokens.emplace_back(tokenType::LITERAL, word);
 		}
 		else if (isAlphabet(current))

@@ -35,7 +35,7 @@ private:
 	bool isOperator(char c);
 	bool isStringLiteral(char c);
 	string nextWord();
-	string nextNumber();
+	string nextString();
 
 public:
 	lexicalAnalyzer(const string& source):input(source),location(0)

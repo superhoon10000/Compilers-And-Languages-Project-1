@@ -24,7 +24,7 @@ int main()
 
 	//While loop that reads through the file line by line
 	while (getline(codeSet, line)) {
-
+		
 		//deletes all comments and extra spaces from the function
 		line = deleteComment(line);
 
