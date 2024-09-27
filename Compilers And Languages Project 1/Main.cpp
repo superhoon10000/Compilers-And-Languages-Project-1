@@ -15,7 +15,7 @@ int main()
 
 
 	//asks for the file to output the processed code to
-	cout << "Enter name for output file\n";
+	cout << "\nEnter name for output file\n";
 	getline(cin, oFileName);
 
 	//initialized to the files asked for by the user
@@ -40,7 +40,7 @@ int main()
 	codeOutput.open(oFileName);
 	codeOutput.seekg(0);
 
-	cout << "Enter Name of File to Output the final tokenized code to\n";
+	cout << "\nEnter Name of File to Output the final tokenized code to\n";
 	getline(cin, tokenizedOFileName);
 
 
