@@ -1,6 +1,7 @@
 #pragma once
 #include "Header.h"
 
+// a class that holds the type of token
 enum class tokenType
 {
 	KEYWORD,
@@ -11,6 +12,7 @@ enum class tokenType
 	UNKNOWN
 };
 
+//A struct that can hold both the value and the type of a token
 struct token
 {
 	tokenType type;
@@ -52,7 +54,7 @@ string getTokenName(tokenType type);
 void outputTokens(const vector<token>& tokens, const string& fileName, int& count);
 
 
-/*Uses inspiration from the lexical Analysis created by Geeksforgeeks
+/*Uses inspiration and a modified version of the lexical Analysis created by Geeksforgeeks
 https://www.geeksforgeeks.org/lexical-analyzer-in-cpp/
 had trouble figuring this out without some help
 */
