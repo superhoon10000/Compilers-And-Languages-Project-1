@@ -7,7 +7,7 @@ void outputTokens(const vector<token>& tokens, const string& fileName, int& coun
 
 	for (const auto& token : tokens)
 	{
-		output << "Value: " << token.value << ", Type of token: " << getTokenName(token.type) << endl;
+		output << left << "Value: " << setw(25) << token.value << "Type of token: " << setw(25) << getTokenName(token.type) << endl;
 		count++;
 	}
 }

@@ -37,23 +37,29 @@ int main()
 	codeSet.close();
 	codeOutput.close();
 
+	//opens up to the beginning of the Output file so that the tokenizer can start from the beginning.
 	codeOutput.open(oFileName);
 	codeOutput.seekg(0);
 
-	cout << "\nEnter Name of File to Output the final tokenized code to\n";
+	//asks for the file to output the tokenized code to
+	cout << "Enter Name of File to Output the final tokenized code to\n";
 	getline(cin, tokenizedOFileName);
 
 
-
+	//loop that goes through the output code line by line and tokenizes it
 	while (getline(codeOutput, line))
 	{
 		lexicalAnalyzer tokenizer(line);
 		vector<token> tokens = tokenizer.tokenize();
+
+		//using the outputTokens function outputs the tokens created to the file specified
 		outputTokens(tokens,tokenizedOFileName,tokenCount);
 	}
 
+	//opens the file with the tokenized output in append mode so that it does not overwrite what is in it
 	ofstream tokenizedFile(tokenizedOFileName, ios::app);
 
+	//Outputs the total number of tokens to the end of the tokenized file.
 	tokenizedFile << "\n\nThere are a total of: " << tokenCount << " Tokens.";
 
 	codeOutput.close();
