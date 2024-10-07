@@ -1,0 +1,7 @@
+void greet() {
+cout << "Hello!" << endl;
+}
+int main() {
+greet();
+return 0;
+}

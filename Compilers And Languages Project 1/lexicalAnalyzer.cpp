@@ -9,8 +9,8 @@ void lexicalAnalyzer::initKeywords()
 	keywords["print"] = tokenType::KEYWORD;
 	keywords["int"] = tokenType::KEYWORD;
 	keywords["calculate_sum"] = tokenType::KEYWORD;
-	keywords["cout"] = tokenType::KEYWORD;
-	keywords["endl"] = tokenType::KEYWORD;
+	keywords["void"] = tokenType::KEYWORD;
+	keywords["else"] = tokenType::KEYWORD;
 }
 
 //uses a bool to return a true or false value on if a character is seen as a whitespace character
@@ -46,7 +46,7 @@ bool lexicalAnalyzer::isSeparator(char c)
 //uses a bool to return a true or false value on if a character is seen as an operator character
 bool lexicalAnalyzer::isOperator(char c)
 {
-	return c == '=' || c == '+' || c == '<';
+	return c == '=' || c == '+' || c == '<' || c == '>';
 }
 
 //uses a bool to return a true or false value on if a character is seen as a string literal
@@ -110,58 +110,71 @@ vector<token> lexicalAnalyzer::tokenize()
 		//a variable that holds the char of the current location such as 'i' in int or '=' where there is a =
 		char current = input[location];
 
+		// checks if it is whitespace and if so skips it.
 		if (isWhitespace(current))
 		{
 			location++;
 			continue;
 		}
 
+		//checks if it is a string literal and if so it gets the full string and adds it to the back of the vector as a literal type
 		if (isStringLiteral(current))
 		{
 			string word = nextString();
 			tokens.emplace_back(tokenType::LITERAL, word);
 		}
+		//checks if it is an alphabetical char or _ and if so it gets the next word
 		else if (isAlphabet(current) || current == '_')
 		{
 			string word = nextWord();
+			//if it is a keyword adds it to the back of the vector as type keyword
 			if (keywords.find(word) != keywords.end())
 			{
 				tokens.emplace_back(tokenType::KEYWORD, word);
 			}
+			//if it is an identifier adds it to the back of the vector as type identifier
 			else
 			{
 				tokens.emplace_back(tokenType::IDENTIFIER, word);
 			}
 		}
+		//checks if it's a number by itself and if so put it in the back of the vector as type literal
 		else if(isNum(current))
 		{
 			string number = nextWord();
 			tokens.emplace_back(tokenType::LITERAL, number);
 		}
+		//checks if it is an operator
 		else if(isOperator(current))
 		{
+			//gets the next char and checks if it is a compound operator 
 			char nextChar = input[location + 1];
+			//if it is a compound operator it outputs both to the vector as one compound operator
 			if((current == '=' && nextChar == '=') || (current == '<' && nextChar == '<'))
 			{
 				tokens.emplace_back(tokenType::OPERATOR, string(1, current) + string(1, nextChar));
 				location+= 2;
 			}
+			//if not it just outputs the operator to the vector
 			else
 			{
 				tokens.emplace_back(tokenType::OPERATOR, string(1, current));
 				location++;
 			}
 		}
+		//checks if it is a separator adds it to the back of the vector as type separator
 		else if(isSeparator(current))
 		{
 			tokens.emplace_back(tokenType::SEPARATOR, string(1, current));
 			location++;
 		}
+		//if all else fails outputs an unknown type for testing errors
 		else
 		{
 			tokens.emplace_back(tokenType::UNKNOWN, string(1, current));
 			location++;
 		}
 	}
+	//returns the tokens vector which holds all the values
 	return tokens;
 }

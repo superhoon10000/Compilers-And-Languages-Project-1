@@ -1,0 +1,40 @@
+Value: int                                     Type of token: Keyword                                 
+Value: main                                    Type of token: Identifier                              
+Value: (                                       Type of token: Separator                               
+Value: )                                       Type of token: Separator                               
+Value: {                                       Type of token: Separator                               
+Value: int                                     Type of token: Keyword                                 
+Value: number                                  Type of token: Identifier                              
+Value: =                                       Type of token: Operator                                
+Value: 10                                      Type of token: Literal                                 
+Value: ;                                       Type of token: Separator                               
+Value: if                                      Type of token: Keyword                                 
+Value: (                                       Type of token: Separator                               
+Value: number                                  Type of token: Identifier                              
+Value: >                                       Type of token: Operator                                
+Value: 5                                       Type of token: Literal                                 
+Value: )                                       Type of token: Separator                               
+Value: {                                       Type of token: Separator                               
+Value: cout                                    Type of token: Identifier                              
+Value: <<                                      Type of token: Operator                                
+Value: "Number is greater than 5"              Type of token: Literal                                 
+Value: <<                                      Type of token: Operator                                
+Value: endl                                    Type of token: Identifier                              
+Value: ;                                       Type of token: Separator                               
+Value: }                                       Type of token: Separator                               
+Value: else                                    Type of token: Keyword                                 
+Value: {                                       Type of token: Separator                               
+Value: cout                                    Type of token: Identifier                              
+Value: <<                                      Type of token: Operator                                
+Value: "Number is less than or equal to 5"     Type of token: Literal                                 
+Value: <<                                      Type of token: Operator                                
+Value: endl                                    Type of token: Identifier                              
+Value: ;                                       Type of token: Separator                               
+Value: }                                       Type of token: Separator                               
+Value: return                                  Type of token: Keyword                                 
+Value: 0                                       Type of token: Literal                                 
+Value: ;                                       Type of token: Separator                               
+Value: }                                       Type of token: Separator                               
+
+
+There are a total of: 37 Tokens.

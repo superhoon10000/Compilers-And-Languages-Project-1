@@ -139,6 +139,14 @@
     <ClInclude Include="Header.h" />
     <ClInclude Include="lexicalAnalyzer.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="CPP set 1 cleaned.txt" />
+    <Text Include="CPP set 1 tokenized.txt" />
+    <Text Include="CPP set 1.txt" />
+    <Text Include="CPP set 2 cleaned.txt" />
+    <Text Include="CPP set 2 tokenized.txt" />
+    <Text Include="CPP set 2.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
