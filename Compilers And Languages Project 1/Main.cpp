@@ -42,7 +42,7 @@ int main()
 	codeOutput.seekg(0);
 
 	//asks for the file to output the tokenized code to
-	cout << "Enter Name of File to Output the final tokenized code to\n";
+	cout << "\nEnter Name of File to Output the final tokenized code to\n";
 	getline(cin, tokenizedOFileName);
 
 

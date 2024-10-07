@@ -45,33 +45,4 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="Code set 1.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="Set 1 Output.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="token Set 1.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="CPP code.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="Python code.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="CPP Output.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="CPP tokenized.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="Python Output.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="Python tokenized.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-  </ItemGroup>
 </Project>
